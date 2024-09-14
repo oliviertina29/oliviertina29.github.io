@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de TINA Djara Olivier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .skill-item {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .skill-tooltip {
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+        }
+        @keyframes slideInFromRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .animate-slideInFromRight {
+            animation: slideInFromRight 1s ease-out forwards;
+        }
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+        .bg-grid-pattern {
+        background-image: 
+            linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+            linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+        background-size: 20px 20px;
+        }
+        .contact-link {
+            transition: transform 0.3s ease;
+        }
+        .contact-link:hover {
+            transform: translateY(-2px);
+        }
+        @keyframes expand {
+        0% { width: 0; }
+        100% { width: 100%; }
+        }
+        .animate-expand {
+            animation: expand 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div id="particles-js" class="fixed inset-0 z-0 pointer-events-none"></div>
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-800 text-white p-8 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 id="name" class="text-4xl font-bold" data-text="TINA Djara Olivier"></h1>
+                <p id="title" class="text-xl mt-2" data-text="Data Scientist | Python Developer"></p>
+            </div>
+            <nav class="mt-4 md:mt-0">
+                <a href="#presentation" class="mx-2 hover:text-blue-200">Presentation</a>
+                <a href="#cursus-academic" class="mx-2 hover:text-blue-200">Academic journey</a>
+                <a href="#experiences" class="mx-2 hover:text-blue-200">Experiences</a>
+                <a href="#projets" class="mx-2 hover:text-blue-200">Projects</a>
+                <a href="#contact" class="mx-2 hover:text-blue-200">Contact</a>
+            </nav>
+        </div> 
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section id="presentation" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6 overflow-hidden relative">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="flex flex-col md:flex-row items-center relative z-10">
+                <div class="md:w-2/5 mb-6 md:mb-0 transform hover:scale-105 transition-transform duration-300">
+                    <div class="relative group">
+                        <img src="images/av.jpeg" alt="TINA Djara Olivier" class="rounded-lg w-64 h-64 object-cover mx-auto shadow-lg">
+                        <div class="absolute inset-0 bg-blue-600 opacity-0 transition-opacity duration-300 rounded-lg"></div>
+                    </div>
+                </div>
+                <div class="md:w-3/5 md:pl-8">
+                    <h2 class="text-3xl font-semibold mb-4 text-blue-600 animate-fadeIn">About Me</h2>
+                    <p class="text-lg mb-4 animate-slideInFromRight">I'm <span class="font-semibold text-blue-600">TINA Djara Olivier</span>, a passionate Data Scientist specializing in Quantitative and Financial Modeling with expertise in Data Engineering. My journey has equipped me with a solid understanding of AI and Big Data technologies, which I apply to solve complex problems across various domains.</p>
+                    <p class="text-lg mb-4 animate-slideInFromRight delay-200">Currently pursuing a Master's degree at Mohammed VI Polytechnic University, I focus on applying advanced machine learning and deep learning techniques to extract valuable insights from large datasets. My goal is to contribute to innovation in the field of data science and create positive impact through data analysis.</p>
+                    <div class="mt-6 flex flex-wrap animate-fadeIn delay-400">
+                        <a href="mailto:Olivier.Djara@um6p.ma" class="contact-link mr-4 mb-2 flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                            <i class="fas fa-envelope mr-2 text-xl"></i> Olivier.Djara@um6p.ma
+                        </a>
+                        <p class="contact-link mr-4 mb-2 flex items-center text-gray-700">
+                            <i class="fas fa-phone mr-2 text-xl"></i> +212 631-648689
+                        </p>
+                        <a href="https://github.com/oliviertina29" target="_blank" class="contact-link mr-4 mb-2 flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                            <i class="fab fa-github mr-2 text-xl"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/djara-olivier-tina/" target="_blank" class="contact-link mb-2 flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                            <i class="fab fa-linkedin mr-2 text-xl"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cursus-academic" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Academic Background</h2>
+            <div class="space-y-8">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="md:w-1/4 mb-4 md:mb-0 md:mr-6">
+                        <a href="https://www.um6p.ma/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/um6p.png" alt="UM6P Logo" class="w-32 h-32 object-contain mx-auto hover:opacity-80 transition-opacity">
+                        </a>                    
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-medium text-gray-800">MSc in Quantitative and Financial Modeling</h3>
+                        <p class="text-lg text-blue-600">Mohamed VI Polytechnic University, College of Computing & Africa Business School</p>
+                        <p class="text-gray-400 mb-2">2022-2024 | Benguerir, Morocco</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Specialization in Data Engineering</li>
+                            <li>Machine Learning, Deep Learning, Big Data technologies</li>
+                            <li>Database management, Data warehouse, Business Intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="md:w-1/4 mb-4 md:mb-0 md:mr-6">
+                        <a href="http://www.uh1.ac.ma/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/uhp.png" alt="Hassan 1st University Logo" class="w-32 h-32 object-contain mx-auto hover:opacity-80 transition-opacity">
+                        </a>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-medium text-gray-800">Bachelor in Applied Mathematics</h3>
+                        <p class="text-lg text-blue-600">Hassan 1st University, Faculty of Science and Technology</p>
+                        <p class="text-gray-400 mb-2">2018-2021 | Settat, Morocco</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Statistics and probability</li>
+                            <li>Calculus, linear algebra and partial differential equations</li>
+                            <li>Object-oriented programming and Mathematical modeling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiences" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-8 text-blue-600 text-center">Professional Experience</h2>
+            <div class="space-y-8">
+                <!-- Expérience 1 -->
+                <div class="container mx-auto flex flex-col md:flex-row justify-between items-center bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="md:w-3/5 md:pl-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <span class="text-xl font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">Data Science Intern</h3>
+                                <p class="text-lg text-blue-600">UM6P - Analytics Lab | Rabat</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">03/2024 - 09/2024</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Analysis of satellite images using QGIS</li>
+                            <li>Literature review on images segmentation and edge detection models</li>
+                            <li>Satellite imagery-based parcel segmentation and delineation</li>
+                            <li>Implementation of segmentation models (Unet, Linknet, FPN)</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-2/5 mb-6 md:mb-0 transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative group">
+                            <img src="images/im_int.png" alt="TINA Djara Olivier" class="rounded-lg w-128 h-64 object-cover mx-auto shadow-lg">
+                            <div class="absolute inset-0 bg-blue-600 opacity-0 transition-opacity duration-300 rounded-lg"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Expérience 2 -->
+                <div class="container mx-auto flex flex-col md:flex-row justify-between items-center bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="md:w-3/5 md:pl-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <span class="text-xl font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">Data Science Intern</h3>
+                                <p class="text-lg text-blue-600">AI Movement | Rabat</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">07/2023 - 09/2023</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Litterature review and SOTA  on Knowledge Graphs for diagnosis</li>
+                            <li>Knowledge graph modeling with Neo4j</li>
+                            <li>Implementation of link prediction models</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-2/5 mb-6 md:mb-0 transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative group">
+                            <img src="images/grp_int.png" alt="TINA Djara Olivier" class="rounded-lg w-128 h-64 object-cover mx-auto shadow-lg">
+                            <div class="absolute inset-0 bg-blue-600 opacity-0 transition-opacity duration-300 rounded-lg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Academic and Personal Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Projet 1 -->
+                <div class="bg-gray-50 rounded-lg p-4 shadow">
+                    <a href="https://github.com/oliviertina29/reputation-tracker" target="_blank" rel="noopener noreferrer">
+                        <h3 class="text-xl font-medium text-blue-600 mb-2">Big Data Architecture for Product Reputation Monitoring</h3>
+                        <img src="images/bd_proj.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                    </a>
+                    <p class="text-gray-600 mb-2">10/2023 - 01/2024</p>
+                    <p class="text-gray-700">Developed a scalable big data architecture for monitoring product reputation across various online platforms, utilizing web scraping techniques and API integrations.</p>
+                </div>
+        
+                <!-- Projet 2 -->
+                <div class="bg-gray-50 rounded-lg p-4 shadow">
+                    <a href="https://github.com/oliviertina29/MLops-for-covid-19-detection" target="_blank" rel="noopener noreferrer">
+                        <h3 class="text-xl font-medium text-blue-600 mb-2">MLOps for COVID-19 Detection from X-ray Images</h3>
+                        <img src="images/mlops.png" alt="Project 2" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                    </a>
+                    <p class="text-gray-600 mb-2">04/2023 - 07/2023</p>
+                    <p class="text-gray-700">Implemented an MLOps pipeline for COVID-19 detection using X-ray images, incorporating transfer learning techniques and MLflow for model tracking and versioning.</p>
+                </div>
+        
+                <!-- Projet 3 -->
+                <div class="bg-gray-50 rounded-lg p-4 shadow">
+                    <a href="https://github.com/oliviertina29/ats" target="_blank" rel="noopener noreferrer">
+                        <h3 class="text-xl font-medium text-blue-600 mb-2"> Applicant Tracking System </h3>
+                        <img src="images/at.png" alt="Project 3" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                    </a>
+                    <p class="text-gray-600 mb-2">08/2024 - In progress</p>
+                    <p class="text-gray-700">The Applicant Tracking System (ATS) is a web application designed to efficiently manage job applications. The project consists of a Backend: Developed with Flask, this component provides a RESTful API to manage candidate data and a Frontend: Built using Streamlit, this component provides a user-friendly interface to interact with the data.</p>
+                </div>
+        
+                <!-- Projet 4 -->
+                <div class="bg-gray-50 rounded-lg p-4 shadow">
+                    <a href="https://careercenterdashboard.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                        <h3 class="text-xl font-medium text-blue-600 mb-2">Student Employability Monitoring Dashboard</h3>
+                        <img src="images/dash_proj.png" alt="Project 4" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                    </a>
+                    <p class="text-gray-600 mb-2">07/2024 - 08/2024</p>
+                    <p class="text-gray-700">Welcome to the interactive dashboard for tracking student employability at the UM6P Career Center. This tool provides a detailed view of placement rates by sector, market trends, center performance, and stakeholder satisfaction scores. This dashboard is developed with fictious data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="skill-category">
+                    <h3 class="text-xl font-medium text-blue-600 mb-3">Data Science</h3>
+                    <ul class="space-y-2">
+                        <li class="skill-item" data-skill="Data Acquisition">Exploratory Data Analysis</li>
+                        <li class="skill-item" data-skill="Data Preprocessing">Data Preprocessing</li>
+                        <li class="skill-item" data-skill="Machine Learning">Machine Learning</li>
+                        <li class="skill-item" data-skill="Deep Learning">Deep Learning</li>
+                        <li class="skill-item" data-skill="Natural Language Processing">Natural Language Processing</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="text-xl font-medium text-blue-600 mb-3">Big Data</h3>
+                    <ul class="space-y-2">
+                        <li class="skill-item" data-skill="Hadoop">Hadoop</li>
+                        <li class="skill-item" data-skill="Apache Spark">Apache Spark</li>
+                        <li class="skill-item" data-skill="Kafka">Kafka</li>
+                        <li class="skill-item" data-skill="Data Modeling">Data Modeling</li>
+                        <li class="skill-item" data-skill="Business Intelligence">Business Intelligence</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="text-xl font-medium text-blue-600 mb-3">Programming & Tools</h3>
+                    <ul class="space-y-2">
+                        <li class="skill-item" data-skill="Python">Python</li>
+                        <li class="skill-item" data-skill="SQL">SQL</li>
+                        <li class="skill-item" data-skill="Docker">Docker</li>
+                        <li class="skill-item" data-skill="Git">Git</li>
+                        <li class="skill-item" data-skill="Power BI">Power BI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
+                    <img src="images/C1.png" alt="AWS Certification" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg font-medium text-blue-600 mb-2">Become a specialist of Artificial Intelligence and Machine Learning</h3>
+                    <p class="text-sm text-gray-600 mb-4">Issued by LinkedIn Learning</p>
+                    <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/Devenir specialiste de lintelligence artificielle et du machine learning.pdf">View Certificate</button>
+                </div>
+                <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
+                    <img src="images/C2.png" alt="Huawei Certification" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg font-medium text-blue-600 mb-2">HCIE-Big Data-Data Mining V2.0</h3>
+                    <p class="text-sm text-gray-600 mb-4">Issued by Huawei</p>
+                    <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/HUAWEI HCIE Data Mining.pdf">View Certificate</button>
+                </div>
+                <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
+                    <img src="images/C3.png" alt="Coursera Certification" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg font-medium text-blue-600 mb-2">Artificial Intelligence for All</h3>
+                    <p class="text-sm text-gray-600 mb-4">Issued by Coursera</p>
+                    <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/Certificat l_IA pour tous.pdf">View Certificate</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal pour afficher le certificat -->
+        <div id="certModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden overflow-y-auto h-full w-full z-50">
+            <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white">
+                <div class="mt-3 text-center">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modalTitle">Certificate</h3>
+                    <div class="mt-2 px-7 py-3">
+                        <iframe id="certViewer" class="w-full h-96" src="" frameborder="0"></iframe>
+                    </div>
+                    <div class="items-center px-4 py-3">
+                        <button id="closeModal" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="langues" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Language Proficiency</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="language-item bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-flag-usa text-2xl text-blue-500 mr-3"></i>
+                        <span class="text-xl font-medium text-gray-800">English</span>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <div>
+                                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                                    Fluent
+                                </span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs font-semibold inline-block text-blue-600">
+                                    80%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+                            <div style="width:80%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500 animate-expand"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language-item bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-flag text-2xl text-blue-500 mr-3"></i>
+                        <span class="text-xl font-medium text-gray-800">French</span>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <div>
+                                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                                    Fluent
+                                </span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs font-semibold inline-block text-blue-600">
+                                    95%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+                            <div style="width:95%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500 animate-expand"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language-item bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-language text-2xl text-blue-500 mr-3"></i>
+                        <span class="text-xl font-medium text-gray-800">Bambara</span>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <div>
+                                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">
+                                    Native
+                                </span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs font-semibold inline-block text-green-600">
+                                    100%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-200">
+                            <div style="width:100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 animate-expand"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language-item bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-language text-2xl text-blue-500 mr-3"></i>
+                        <span class="text-xl font-medium text-gray-800">Bomu</span>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <div>
+                                <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">
+                                    Native
+                                </span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs font-semibold inline-block text-green-600">
+                                    100%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-200">
+                            <div style="width:100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 animate-expand"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-4 text-blue-600 text-center">Contact Me</h2>
+            <form action="https://formspree.io/f/xayzeqpy" method="POST">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-gradient-to-r from-blue-600 to-indigo-800 text-white p-4 mt-8">
+        <div class="container mx-auto flex justify-center items-center">
+            <div class="flex items-center space-x-4">
+                <a href="https://github.com/oliviertina29" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/djara-olivier-tina-455bab1b2/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/DjaraTina" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p class="mx-4 text-sm">&copy; 2024 TINA Djara Olivier. All rights reserved.</p>
+            <div class="flex items-center space-x-4">
+                <a href="https://www.facebook.com/olivier.tina.56/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/olivier_tina/?hl=fr" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@oliviertina23" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="new_script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+    <script>
+        const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        direction: 'vertical', // vertical, horizontal
+        gestureDirection: 'vertical', // vertical, horizontal, both
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+        })
+        //get scroll value
+        lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+        console.log({ scroll, limit, velocity, direction, progress })
+        })
+        function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+    </script>
+</body>
+</html>
