@@ -14,6 +14,20 @@ function initializeAll() {
     setupParticles();
     animateOnScroll();
     animateLanguageBars();
+    setupMoreButton();
+}
+
+// Gestion de l'affichage de la nouvelle section
+function setupMoreButton() {
+    const moreBtn = document.getElementById('moreBtn');
+    const moreSection = document.getElementById('more-about-me');
+
+    if (moreBtn && moreSection) {
+        moreBtn.addEventListener('click', function() {
+            moreSection.classList.toggle('hidden');
+            moreBtn.textContent = moreSection.classList.contains('hidden') ? 'More About Me' : 'Less About Me';
+        });
+    }
 }
 
 // Fonction pour animer les barres de langues
