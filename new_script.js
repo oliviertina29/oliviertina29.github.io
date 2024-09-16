@@ -94,13 +94,13 @@ function handleContactFormSubmit(e) {
         headers: { 'Accept': 'application/json' }
     }).then(response => {
         if (response.ok) {
-            alert('Merci pour votre message ! Je vous répondrai bientôt.');
+            alert('Thank you for your message! I will get back to you soon.');
             e.target.reset();
         } else {
-            throw new Error('Erreur réseau');
+            throw new Error('Network error');
         }
     }).catch(error => {
-        alert('Oops! Une erreur est survenue. Veuillez réessayer plus tard.');
+        alert('Oops! An error occurred. Please try again later.');
     });
 }
 
