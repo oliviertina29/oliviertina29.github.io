@@ -22,7 +22,7 @@ This project is my personal portfolio, created to showcase my skills, experience
 ## Technologies Used
 - HTML5
 - CSS3 (with Tailwind CSS for styling)
-- JavaScript (Vanilla JS)
+- JavaScript 
 - Particles.js for visual effects
 - Font Awesome for icons
 
@@ -35,7 +35,7 @@ Through this project, I was able to:
 - Experiment with integrating third-party libraries like Particles.js
 
 ## Usage
-This site is hosted at [\[My Portfolio\]](https://oliver-tina.netlify.app/). You can visit it to learn more about my professional journey and skills.
+This site is hosted at <a href="https://oliver-tina.netlify.app/" target="_blank" rel="noopener noreferrer">[My Portfolio]</a>. You can visit it to learn more about my professional journey and skills.
 
 ## Future Development
 While this project is primarily for personal use, I plan to keep it updated with my latest achievements and skills. Any future improvements will be made as part of my ongoing learning in web development.
