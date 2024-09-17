@@ -17,7 +17,7 @@ This project is my personal portfolio, created to showcase my skills, experience
 - Section on my professional experience
 - Display of my certifications
 - Contact form
-- Language switch option (English/French)
+- Language switch option (English/French) #TODO
 
 ## Technologies Used
 - HTML5
