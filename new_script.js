@@ -230,6 +230,7 @@ function animateExperiences() {
 function animateHeaderText() {
     typeWriter('name', 100);
     setTimeout(() => typeWriter('title', 50), 2000);
+    setTimeout(() => typeWriter('quote', 75), 4000);
 }
 
 // Fonction pour animer le texte lettre par lettre
