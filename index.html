@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de TINA Djara Olivier</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -56,9 +61,9 @@
             animation-delay: 400ms;
         }
         .bg-grid-pattern {
-        background-image: 
-            linear-gradient(to right, #e2e8f0 1px, transparent 1px),
-            linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+        background-image:
+            linear-gradient(to right, rgba(0,255,255,0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,255,255,0.1) 1px, transparent 1px);
         background-size: 20px 20px;
         }
         .contact-link {
@@ -74,11 +79,23 @@
         .animate-expand {
             animation: expand 1.5s ease-out forwards;
         }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .neon-glow {
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        }
+        .neon-text {
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+        }
     </style>
 </head>
-<body class="bg-gray-100">
+<body>
     <div id="particles-js" class="fixed inset-0 z-0 pointer-events-none"></div>
-    <header class="bg-gradient-to-r from-blue-600 to-indigo-800 text-white p-8 shadow-lg">
+    <header class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 shadow-lg neon-glow">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div>
                 <h1 id="name" class="text-4xl font-bold" data-text="TINA Djara Olivier"></h1>
@@ -96,7 +113,7 @@
     </header>
 
     <main class="container mx-auto mt-8 p-4">
-        <section id="presentation" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6 overflow-hidden relative">
+        <section id="presentation" class="mb-12 glassmorphism rounded-lg shadow-md p-6 overflow-hidden relative">
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="flex flex-col md:flex-row items-center relative z-10">
                 <div class="md:w-2/5 mb-6 md:mb-0 transform hover:scale-125 transition-transform duration-300">
@@ -106,7 +123,7 @@
                     </div>
                 </div>
                 <div class="md:w-3/5 md:pl-8">
-                    <h2 class="text-3xl font-semibold mb-4 text-blue-600 animate-fadeIn">About Me</h2>
+                    <h2 class="text-3xl font-semibold mb-4 text-cyan-400 neon-text animate-fadeIn">About Me</h2>
                     <p class="text-lg mb-4 animate-slideInFromRight">I'm <span class="font-semibold text-blue-600">TINA Djara Olivier</span>, a recently graduated Data Scientist with an MSc in Quantitative and Financial Modeling, specializing in Data Engineering. My academic journey has equipped me with a robust foundation in AI, Big Data technologies, and advanced analytical techniques.</p>
                     <p class="text-lg mb-4 animate-slideInFromRight delay-200">With expertise in data science, big data technologies, and programming, I'm adept at leveraging tools like Python, SQL, Hadoop, and Apache Spark to extract valuable insights from complex datasets. My skills span from exploratory data analysis and machine learning to natural language processing and business intelligence. I'm passionate about applying these skills to solve real-world problems and drive innovation in data science.</p>
                     <p class="text-lg mb-4 animate-slideInFromRight delay-400">Don't hesitate to reach out if you're looking for a dedicated data professional to contribute to your team or project!</p>
@@ -132,14 +149,14 @@
         </section>
 
         <!-- Nouvelle section pour plus d'informations -->
-        <section id="more-about-me" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6 hidden">
+        <section id="more-about-me" class="mb-12 glassmorphism rounded-lg shadow-md p-6 hidden">
             <!-- <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">More About Me</h2> -->
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
                 <div class="space-y-6">
                     <div>
-                        <h3 class="text-2xl font-medium text-blue-600 mb-3">Community Involvement</h3>
-                        <p class="text-gray-700">Beyond academics, I believe strongly in cultivating leadership and personal growth through active participation in extracurricular activities. As 
+                        <h3 class="text-2xl font-medium text-cyan-400 neon-text mb-3">Community Involvement</h3>
+                        <p class="text-gray-300">Beyond academics, I believe strongly in cultivating leadership and personal growth through active participation in extracurricular activities. As 
                             <span class="font-bold">Deputy Secretary General</span> of the 
                             <span class="font-bold">International Students Club</span> (2022-2023) and 
                             <span class="font-bold">Head of the Event Committee</span> at the 
@@ -149,8 +166,8 @@
                             <span class="font-bold">Association of Students and Trainees of Mali</span> (2017-2018) allowed me to refine my leadership, communication, and team-building skills. These roles have played a pivotal part in shaping my personal and professional growth, reinforcing my belief that leadership and community involvement are vital to a well-rounded education.</p>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-medium text-blue-600 mb-3">Hobbies</h3>
-                        <p class="text-gray-700">  In my free time, I enjoy a variety of activities that keep me both mentally and physically active. I have a passion for <span class="font-bold">scientific documentaries</span> and <span class="font-bold">psychology</span>, which allow me to stay curious and continuously learn. I also love <span class="font-bold">swimming</span> to stay fit and energized. In addition, I play several <span class="font-bold">musical instruments</span> such as the <span class="font-bold">bass guitar</span>, <span class="font-bold">keyboard</span>, and <span class="font-bold">drums</span>, which give me a creative outlet. Lastly, I deeply value <span class="font-bold">traveling</span> and spending quality time with my <span class="font-bold">family and friends</span>.</p>
+                        <h3 class="text-2xl font-medium text-cyan-400 neon-text mb-3">Hobbies</h3>
+                        <p class="text-gray-300">  In my free time, I enjoy a variety of activities that keep me both mentally and physically active. I have a passion for <span class="font-bold">scientific documentaries</span> and <span class="font-bold">psychology</span>, which allow me to stay curious and continuously learn. I also love <span class="font-bold">swimming</span> to stay fit and energized. In addition, I play several <span class="font-bold">musical instruments</span> such as the <span class="font-bold">bass guitar</span>, <span class="font-bold">keyboard</span>, and <span class="font-bold">drums</span>, which give me a creative outlet. Lastly, I deeply value <span class="font-bold">traveling</span> and spending quality time with my <span class="font-bold">family and friends</span>.</p>
                     </div>
                 </div>
                 <div class="space-y-6">
@@ -158,6 +175,7 @@
                     <img src="images/h4.png" alt="Photography Hobby" class="w-full h-64 object-cover rounded-lg shadow-md">
                 </div>
             </div>
+            
             
             <div class="mt-8">
                 <!-- <h3 class="text-2xl font-medium text-blue-600 mb-3">My Journey in Data Science</h3> -->
@@ -176,8 +194,8 @@
             </div>
         </section>
 
-        <section id="cursus-academic" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Academic Background</h2>
+        <section id="cursus-academic" class="mb-12 glassmorphism rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-cyan-400 neon-text text-center">Academic Background</h2>
             <div class="space-y-8">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
                     <div class="md:w-1/4 mb-4 md:mb-0 md:mr-6">
@@ -186,10 +204,10 @@
                         </a>                    
                     </div>
                     <div class="md:w-3/4">
-                        <h3 class="text-2xl font-medium text-gray-800">MSc in Quantitative and Financial Modeling</h3>
-                        <p class="text-lg text-blue-600">Mohamed VI Polytechnic University, College of Computing & Africa Business School</p>
+                        <h3 class="text-2xl font-medium text-cyan-400 neon-text">MSc in Quantitative and Financial Modeling</h3>
+                        <p class="text-lg text-cyan-400">Mohamed VI Polytechnic University, College of Computing & Africa Business School</p>
                         <p class="text-gray-400 mb-2">2022-2024 | Benguerir, Morocco</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <ul class="list-disc list-inside text-gray-400 space-y-1">
                             <li>Specialization in Data Engineering</li>
                             <li>Machine Learning, Deep Learning, Big Data technologies</li>
                             <li>Database management, Data warehouse, Business Intelligence</li>
@@ -204,10 +222,10 @@
                         </a>
                     </div>
                     <div class="md:w-3/4">
-                        <h3 class="text-2xl font-medium text-gray-800">Bachelor in Applied Mathematics</h3>
-                        <p class="text-lg text-blue-600">Hassan 1st University, Faculty of Science and Technology</p>
+                        <h3 class="text-2xl font-medium text-cyan-400 neon-text">Bachelor in Applied Mathematics</h3>
+                        <p class="text-lg text-cyan-400">Hassan 1st University, Faculty of Science and Technology</p>
                         <p class="text-gray-400 mb-2">2018-2021 | Settat, Morocco</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <ul class="list-disc list-inside text-gray-400 space-y-1">
                             <li>Statistics and probability</li>
                             <li>Calculus, linear algebra and partial differential equations</li>
                             <li>Object-oriented programming and Mathematical modeling</li>
@@ -217,8 +235,8 @@
             </div>
         </section>
 
-        <section id="experiences" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-semibold mb-8 text-blue-600 text-center">Professional Experience</h2>
+        <section id="experiences" class="mb-12 glassmorphism rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-8 text-cyan-400 neon-text text-center">Professional Experience</h2>
             <div class="space-y-8">
                 <!-- Expérience 1 -->
                 <div class="container mx-auto flex flex-col md:flex-row justify-between items-center bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -228,12 +246,12 @@
                                 <span class="text-xl font-bold">1</span>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-gray-800">Data Science Intern</h3>
-                                <p class="text-lg text-blue-600">UM6P - Analytics Lab | Rabat</p>
+                                <h3 class="text-2xl font-bold text-cyan-400 neon-text">Data Science Intern</h3>
+                                <p class="text-lg text-cyan-400">UM6P - Analytics Lab | Rabat</p>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-4">03/2024 - 09/2024</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
                             <li>Analysis of satellite images using QGIS</li>
                             <li>Literature review on images segmentation and edge detection models</li>
                             <li>Satellite imagery-based parcel segmentation and delineation</li>
@@ -256,12 +274,12 @@
                                 <span class="text-xl font-bold">2</span>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-gray-800">Data Science Intern</h3>
-                                <p class="text-lg text-blue-600">AI Movement | Rabat</p>
+                                <h3 class="text-2xl font-bold text-cyan-400 neon-text">Data Science Intern</h3>
+                                <p class="text-lg text-cyan-400">AI Movement | Rabat</p>
                             </div>
                         </div>
                         <p class="text-gray-600 mb-4">07/2023 - 09/2023</p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
                             <li>Litterature review and SOTA  on Knowledge Graphs for diagnosis</li>
                             <li>Knowledge graph modeling with Neo4j</li>
                             <li>Implementation of link prediction models</li>
@@ -277,13 +295,13 @@
             </div>
         </section>
 
-        <section id="projets" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Academic and Personal Projects</h2>
+        <section id="projets" class="mb-12 glassmorphism rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-cyan-400 neon-text text-center">Academic and Personal Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Projet 1 -->
                 <div class="bg-gray-50 rounded-lg p-4 shadow">
                     <a href="https://github.com/oliviertina29/reputation-tracker" target="_blank" rel="noopener noreferrer">
-                        <h3 class="text-xl font-medium text-blue-600 mb-2">Big Data Architecture for Product Reputation Monitoring</h3>
+                        <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2">Big Data Architecture for Product Reputation Monitoring</h3>
                         <img src="images/bd_proj.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
                     </a>
                     <p class="text-gray-600 mb-2">10/2023 - 01/2024</p>
@@ -293,7 +311,7 @@
                 <!-- Projet 2 -->
                 <div class="bg-gray-50 rounded-lg p-4 shadow">
                     <a href="https://github.com/oliviertina29/MLops-for-covid-19-detection" target="_blank" rel="noopener noreferrer">
-                        <h3 class="text-xl font-medium text-blue-600 mb-2">MLOps for COVID-19 Detection from X-ray Images</h3>
+                        <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2">MLOps for COVID-19 Detection from X-ray Images</h3>
                         <img src="images/mlops.png" alt="Project 2" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
                     </a>
                     <p class="text-gray-600 mb-2">04/2023 - 07/2023</p>
@@ -303,7 +321,7 @@
                 <!-- Projet 3 -->
                 <div class="bg-gray-50 rounded-lg p-4 shadow">
                     <a href="https://github.com/oliviertina29/ats" target="_blank" rel="noopener noreferrer">
-                        <h3 class="text-xl font-medium text-blue-600 mb-2"> Applicant Tracking System </h3>
+                        <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2"> Applicant Tracking System </h3>
                         <img src="images/at.png" alt="Project 3" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
                     </a>
                     <p class="text-gray-600 mb-2">08/2024 - In progress</p>
@@ -313,7 +331,7 @@
                 <!-- Projet 4 -->
                 <div class="bg-gray-50 rounded-lg p-4 shadow">
                     <a href="https://careercenterdashboard.streamlit.app/" target="_blank" rel="noopener noreferrer">
-                        <h3 class="text-xl font-medium text-blue-600 mb-2">Student Employability Monitoring Dashboard</h3>
+                        <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2">Student Employability Monitoring Dashboard</h3>
                         <img src="images/dash_proj.png" alt="Project 4" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
                     </a>
                     <p class="text-gray-600 mb-2">07/2024 - 08/2024</p>
@@ -322,60 +340,60 @@
             </div>
         </section>
 
-        <section id="competences" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Technical Skills</h2>
+        <section id="competences" class="mb-12 glassmorphism rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-cyan-400 neon-text text-center">Technical Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="skill-category">
-                    <h3 class="text-xl font-medium text-blue-600 mb-3">Data Science</h3>
+                    <h3 class="text-xl font-medium text-cyan-400 neon-text mb-3">Data Science</h3>
                     <ul class="space-y-2">
-                        <li class="skill-item" data-skill="Data Acquisition">Exploratory Data Analysis</li>
-                        <li class="skill-item" data-skill="Data Preprocessing">Data Preprocessing</li>
-                        <li class="skill-item" data-skill="Machine Learning">Machine Learning</li>
-                        <li class="skill-item" data-skill="Deep Learning">Deep Learning</li>
-                        <li class="skill-item" data-skill="Natural Language Processing">Natural Language Processing</li>
+                        <li class="skill-item text-gray-300" data-skill="Data Acquisition">Exploratory Data Analysis</li>
+                        <li class="skill-item text-gray-300" data-skill="Data Preprocessing">Data Preprocessing</li>
+                        <li class="skill-item text-gray-300" data-skill="Machine Learning">Machine Learning</li>
+                        <li class="skill-item text-gray-300" data-skill="Deep Learning">Deep Learning</li>
+                        <li class="skill-item text-gray-300" data-skill="Natural Language Processing">Natural Language Processing</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3 class="text-xl font-medium text-blue-600 mb-3">Big Data</h3>
+                    <h3 class="text-xl font-medium text-cyan-400 neon-text mb-3">Big Data</h3>
                     <ul class="space-y-2">
-                        <li class="skill-item" data-skill="Hadoop">Hadoop</li>
-                        <li class="skill-item" data-skill="Apache Spark">Apache Spark</li>
-                        <li class="skill-item" data-skill="Kafka">Kafka</li>
-                        <li class="skill-item" data-skill="Data Modeling">Data Modeling</li>
-                        <li class="skill-item" data-skill="Business Intelligence">Business Intelligence</li>
+                        <li class="skill-item text-gray-300" data-skill="Hadoop">Hadoop</li>
+                        <li class="skill-item text-gray-300" data-skill="Apache Spark">Apache Spark</li>
+                        <li class="skill-item text-gray-300" data-skill="Kafka">Kafka</li>
+                        <li class="skill-item text-gray-300" data-skill="Data Modeling">Data Modeling</li>
+                        <li class="skill-item text-gray-300" data-skill="Business Intelligence">Business Intelligence</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3 class="text-xl font-medium text-blue-600 mb-3">Programming & Tools</h3>
+                    <h3 class="text-xl font-medium text-cyan-400 neon-text mb-3">Programming & Tools</h3>
                     <ul class="space-y-2">
-                        <li class="skill-item" data-skill="Python">Python</li>
-                        <li class="skill-item" data-skill="SQL">SQL</li>
-                        <li class="skill-item" data-skill="Docker">Docker</li>
-                        <li class="skill-item" data-skill="Git">Git</li>
-                        <li class="skill-item" data-skill="Power BI">Power BI</li>
+                        <li class="skill-item text-gray-300" data-skill="Python">Python</li>
+                        <li class="skill-item text-gray-300" data-skill="SQL">SQL</li>
+                        <li class="skill-item text-gray-300" data-skill="Docker">Docker</li>
+                        <li class="skill-item text-gray-300" data-skill="Git">Git</li>
+                        <li class="skill-item text-gray-300" data-skill="Power BI">Power BI</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="certifications" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Certifications</h2>
+        <section id="certifications" class="mb-12 glassmorphism rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-cyan-400 neon-text text-center">Certifications</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
                     <img src="images/C1.png" alt="AWS Certification" class="w-full h-40 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-medium text-blue-600 mb-2">Becoming a specialist of Artificial Intelligence and Machine Learning</h3>
+                    <h3 class="text-lg font-medium text-cyan-400 neon-text mb-2">Becoming a specialist of Artificial Intelligence and Machine Learning</h3>
                     <p class="text-sm text-gray-600 mb-4">Issued by LinkedIn Learning</p>
                     <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/Devenir specialiste de lintelligence artificielle et du machine learning.pdf">View Certificate</button>
                 </div>
                 <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
                     <img src="images/C2.png" alt="Huawei Certification" class="w-full h-40 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-medium text-blue-600 mb-2">HCIE-Big Data-Data Mining V2.0</h3>
+                    <h3 class="text-lg font-medium text-cyan-400 neon-text mb-2">HCIE-Big Data-Data Mining V2.0</h3>
                     <p class="text-sm text-gray-600 mb-4">Issued by Huawei</p>
                     <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/HUAWEI HCIE Data Mining.pdf">View Certificate</button>
                 </div>
                 <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
                     <img src="images/C3.png" alt="Coursera Certification" class="w-full h-40 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-medium text-blue-600 mb-2">Artificial Intelligence for All</h3>
+                    <h3 class="text-lg font-medium text-cyan-400 neon-text mb-2">Artificial Intelligence for All</h3>
                     <p class="text-sm text-gray-600 mb-4">Issued by Coursera</p>
                     <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/Certificat l_IA pour tous.pdf">View Certificate</button>
                 </div>
@@ -383,19 +401,19 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
                 <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
                     <img src="images/pydev.png" alt="AWS Certification" class="w-full h-40 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-medium text-blue-600 mb-2">Becoming a Python Developer</h3>
+                    <h3 class="text-lg font-medium text-cyan-400 neon-text mb-2">Becoming a Python Developer</h3>
                     <p class="text-sm text-gray-600 mb-4">Issued by LinkedIn Learning</p>
                     <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/CertificateOfCompletion_Devenir developpeur  developpeuse Python.pdf">View Certificate</button>
                 </div>
                 <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow ">
                     <img src="images/yw_dbms.png" alt="Huawei Certification" class="w-full h-40 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-medium text-blue-600 mb-2">Data Management and Analysis Course</h3>
+                    <h3 class="text-lg font-medium text-cyan-400 neon-text mb-2">Data Management and Analysis Course</h3>
                     <p class="text-sm text-gray-600 mb-4">Issued by Huawei</p>
                     <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/HUAWEI DBMS.pdf">View Certificate</button>
                 </div>
                 <div class="certification-card bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition-shadow">
                     <img src="images/sks.png" alt="Coursera Certification" class="w-full h-40 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-medium text-blue-600 mb-2">Mastering the most in-demand soft skills</h3>
+                    <h3 class="text-lg font-medium text-cyan-400 neon-text mb-2">Mastering the most in-demand soft skills</h3>
                     <p class="text-sm text-gray-600 mb-4">Issued by LinkedIn L</p>
                     <button class="view-cert bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" data-cert="images/Certificats/Certificats/Maitriser les soft skills les plus demandees.pdf">View Certificate</button>
                 </div>
@@ -419,8 +437,8 @@
             </div>
         </div>
 
-        <section id="langues" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-semibold mb-6 text-blue-600 text-center">Language Proficiency</h2>
+        <section id="langues" class="mb-12 glassmorphism rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-6 text-cyan-400 neon-text text-center">Language Proficiency</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="language-item bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div class="flex items-center mb-3">
@@ -517,19 +535,19 @@
             </div>
         </section>
 
-        <section id="contact" class="mb-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-md p-6">
-            <h2 class="text-3xl font-semibold mb-4 text-blue-600 text-center">Contact Me</h2>
+        <section id="contact" class="mb-12 glassmorphism rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-semibold mb-4 text-cyan-400 neon-text text-center">Contact Me</h2>
             <form action="https://formspree.io/f/xayzeqpy" method="POST">
                 <div class="mb-4">
-                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name:</label>
                     <input type="text" id="name" name="name" placeholder="your name here" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
                     <input type="email" id="email" name="email" placeholder="your email adress here" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 </div>
                 <div class="mb-6">
-                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                    <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message:</label>
                     <textarea id="message" name="message" placeholder="your message here" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
                 </div>
                 <div class="flex items-center justify-between">
@@ -540,7 +558,7 @@
             </form>
         </section>
     </main>
-    <footer class="bg-gradient-to-r from-blue-600 to-indigo-800 text-white p-4 mt-8">
+    <footer class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-4 mt-8 neon-glow">
         <div class="container mx-auto flex justify-center items-center">
             <div class="flex items-center space-x-4">
                 <a href="https://github.com/oliviertina29" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
@@ -553,7 +571,7 @@
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
-            <p class="mx-4 text-sm">&copy; 2024 TINA Djara Olivier. All rights reserved.</p>
+            <p class="mx-4 text-sm">&copy; 2025 TINA Djara Olivier. All rights reserved.</p>
             <div class="flex items-center space-x-4">
                 <a href="https://www.facebook.com/olivier.tina.56/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition-colors duration-300">
                     <i class="fab fa-facebook"></i>

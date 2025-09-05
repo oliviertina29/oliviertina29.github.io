@@ -145,11 +145,13 @@ function animateSkills() {
     skillItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.style.transform = 'translateX(10px)';
-            item.style.color = '#2563EB'; // Bleu
+            item.style.color = '#00ffff'; // Cyan
+            item.classList.add('neon-glow');
         });
         item.addEventListener('mouseleave', () => {
             item.style.transform = 'translateX(0)';
             item.style.color = ''; // Retour à la couleur par défaut
+            item.classList.remove('neon-glow');
         });
     });
 }
