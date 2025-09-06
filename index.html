@@ -91,34 +91,78 @@
         .neon-text {
             text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
         }
+        .cursor {
+            color: #00ffff;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        .animate-gradient {
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .parallax-container {
+            overflow: hidden;
+        }
+        .parallax-image {
+            transition: transform 0.1s ease-out;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: rotateY(5deg) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+        .skill-bar {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            border-radius: 4px;
+            transition: width 1.5s ease;
+        }
     </style>
 </head>
 <body>
     <div id="particles-js" class="fixed inset-0 z-0 pointer-events-none"></div>
-    <header class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 shadow-lg neon-glow">
+    <header class="bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 text-white p-8 shadow-lg neon-glow animate-gradient">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div>
-                <h1 id="name" class="text-4xl font-bold" data-text="TINA Djara Olivier"></h1>
-                <p id="title" class="text-xl mt-2" data-text="Data Scientist | Python Developer"></p>
+                <h1 id="name" class="text-4xl font-bold font-mono" data-text="TINA Djara Olivier"></h1>
+                <p id="title" class="text-xl mt-2 font-mono" data-text="Data Scientist | Python Developer"></p>
                 <p id="quote" class="text-xl mt-2 font-mono" data-text="I can make your data tell a story"></p>
             </div>
             <nav class="mt-4 md:mt-0 text-lg font-bold">
-                <a href="#presentation" class="mx-2 hover:text-blue-200">Presentation</a>
-                <a href="#cursus-academic" class="mx-2 hover:text-blue-200">Education</a>
-                <a href="#experiences" class="mx-2 hover:text-blue-200">Experiences</a>
-                <a href="#projets" class="mx-2 hover:text-blue-200">Projects</a>
-                <a href="#contact" class="mx-2 hover:text-blue-200">Contact</a>
+                <a href="#presentation" class="mx-2 hover:text-blue-200 transition-colors duration-300">Presentation</a>
+                <a href="#cursus-academic" class="mx-2 hover:text-blue-200 transition-colors duration-300">Education</a>
+                <a href="#experiences" class="mx-2 hover:text-blue-200 transition-colors duration-300">Experiences</a>
+                <a href="#projets" class="mx-2 hover:text-blue-200 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="mx-2 hover:text-blue-200 transition-colors duration-300">Contact</a>
             </nav>
-        </div> 
+        </div>
     </header>
 
     <main class="container mx-auto mt-8 p-4">
         <section id="presentation" class="mb-12 glassmorphism rounded-lg shadow-md p-6 overflow-hidden relative">
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="flex flex-col md:flex-row items-center relative z-10">
-                <div class="md:w-2/5 mb-6 md:mb-0 transform hover:scale-125 transition-transform duration-300">
+                <div class="md:w-2/5 mb-6 md:mb-0 transform hover:scale-125 transition-transform duration-300 parallax-container">
                     <div class="relative group">
-                        <img src="images/av.jpeg" alt="TINA Djara Olivier" class="rounded-lg w-64 h-64 object-cover mx-auto shadow-lg">
+                        <img src="images/av.jpeg" alt="TINA Djara Olivier" class="rounded-lg w-64 h-64 object-cover mx-auto shadow-lg parallax-image">
                         <div class="absolute inset-0 bg-blue-600 opacity-0 transition-opacity duration-300 rounded-lg"></div>
                     </div>
                 </div>
@@ -299,40 +343,52 @@
             <h2 class="text-3xl font-semibold mb-6 text-cyan-400 neon-text text-center">Academic and Personal Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Projet 1 -->
-                <div class="bg-gray-50 rounded-lg p-4 shadow">
-                    <a href="https://github.com/oliviertina29/reputation-tracker" target="_blank" rel="noopener noreferrer">
+                <div class="bg-gray-50 rounded-lg p-4 shadow project-card">
+                    <a href="https://github.com/oliviertina29/reputation-tracker" target="_blank" rel="noopener noreferrer" class="block relative overflow-hidden rounded-lg">
                         <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2">Big Data Architecture for Product Reputation Monitoring</h3>
-                        <img src="images/bd_proj.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                        <img src="images/bd_proj.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg mb-4 transition-all duration-300">
+                        <div class="absolute inset-0 bg-cyan-500 bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                            <span class="text-white font-bold text-lg">View Project</span>
+                        </div>
                     </a>
                     <p class="text-gray-600 mb-2">10/2023 - 01/2024</p>
                     <p class="text-gray-700">Developed a scalable big data architecture for monitoring product reputation across various online platforms, utilizing web scraping techniques and API integrations.</p>
                 </div>
         
                 <!-- Projet 2 -->
-                <div class="bg-gray-50 rounded-lg p-4 shadow">
-                    <a href="https://github.com/oliviertina29/MLops-for-covid-19-detection" target="_blank" rel="noopener noreferrer">
+                <div class="bg-gray-50 rounded-lg p-4 shadow project-card">
+                    <a href="https://github.com/oliviertina29/MLops-for-covid-19-detection" target="_blank" rel="noopener noreferrer" class="block relative overflow-hidden rounded-lg">
                         <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2">MLOps for COVID-19 Detection from X-ray Images</h3>
-                        <img src="images/mlops.png" alt="Project 2" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                        <img src="images/mlops.png" alt="Project 2" class="w-full h-48 object-cover rounded-lg mb-4 transition-all duration-300">
+                        <div class="absolute inset-0 bg-purple-500 bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                            <span class="text-white font-bold text-lg">View Project</span>
+                        </div>
                     </a>
                     <p class="text-gray-600 mb-2">04/2023 - 07/2023</p>
                     <p class="text-gray-700">Implemented an MLOps pipeline for COVID-19 detection using X-ray images, incorporating transfer learning techniques and MLflow for model tracking and versioning.</p>
                 </div>
         
                 <!-- Projet 3 -->
-                <div class="bg-gray-50 rounded-lg p-4 shadow">
-                    <a href="https://github.com/oliviertina29/ats" target="_blank" rel="noopener noreferrer">
+                <div class="bg-gray-50 rounded-lg p-4 shadow project-card">
+                    <a href="https://github.com/oliviertina29/ats" target="_blank" rel="noopener noreferrer" class="block relative overflow-hidden rounded-lg">
                         <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2"> Applicant Tracking System </h3>
-                        <img src="images/at.png" alt="Project 3" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                        <img src="images/at.png" alt="Project 3" class="w-full h-48 object-cover rounded-lg mb-4 transition-all duration-300">
+                        <div class="absolute inset-0 bg-pink-500 bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                            <span class="text-white font-bold text-lg">View Project</span>
+                        </div>
                     </a>
                     <p class="text-gray-600 mb-2">08/2024 - In progress</p>
                     <p class="text-gray-700">The Applicant Tracking System (ATS) is a web application designed to efficiently manage job applications. The project consists of a Backend: Developed with Flask, this component provides a RESTful API to manage candidate data and a Frontend: Built using Streamlit, this component provides a user-friendly interface to interact with the data.</p>
                 </div>
         
                 <!-- Projet 4 -->
-                <div class="bg-gray-50 rounded-lg p-4 shadow">
-                    <a href="https://careercenterdashboard.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                <div class="bg-gray-50 rounded-lg p-4 shadow project-card">
+                    <a href="https://careercenterdashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" class="block relative overflow-hidden rounded-lg">
                         <h3 class="text-xl font-medium text-cyan-400 neon-text mb-2">Student Employability Monitoring Dashboard</h3>
-                        <img src="images/dash_proj.png" alt="Project 4" class="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity">
+                        <img src="images/dash_proj.png" alt="Project 4" class="w-full h-48 object-cover rounded-lg mb-4 transition-all duration-300">
+                        <div class="absolute inset-0 bg-green-500 bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                            <span class="text-white font-bold text-lg">View Project</span>
+                        </div>
                     </a>
                     <p class="text-gray-600 mb-2">07/2024 - 08/2024</p>
                     <p class="text-gray-700">Welcome to the interactive dashboard for tracking student employability at the UM6P Career Center. This tool provides a detailed view of placement rates by sector, market trends, center performance, and stakeholder satisfaction scores. This dashboard is developed with fictious data.</p>
@@ -346,31 +402,31 @@
                 <div class="skill-category">
                     <h3 class="text-xl font-medium text-cyan-400 neon-text mb-3">Data Science</h3>
                     <ul class="space-y-2">
-                        <li class="skill-item text-gray-300" data-skill="Data Acquisition">Exploratory Data Analysis</li>
-                        <li class="skill-item text-gray-300" data-skill="Data Preprocessing">Data Preprocessing</li>
-                        <li class="skill-item text-gray-300" data-skill="Machine Learning">Machine Learning</li>
-                        <li class="skill-item text-gray-300" data-skill="Deep Learning">Deep Learning</li>
-                        <li class="skill-item text-gray-300" data-skill="Natural Language Processing">Natural Language Processing</li>
+                        <li class="skill-item text-gray-300" data-skill="Exploratory Data Analysis" data-level="90">Exploratory Data Analysis <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Data Preprocessing" data-level="85">Data Preprocessing <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Machine Learning" data-level="80">Machine Learning <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Deep Learning" data-level="75">Deep Learning <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Natural Language Processing" data-level="70">Natural Language Processing <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3 class="text-xl font-medium text-cyan-400 neon-text mb-3">Big Data</h3>
                     <ul class="space-y-2">
-                        <li class="skill-item text-gray-300" data-skill="Hadoop">Hadoop</li>
-                        <li class="skill-item text-gray-300" data-skill="Apache Spark">Apache Spark</li>
-                        <li class="skill-item text-gray-300" data-skill="Kafka">Kafka</li>
-                        <li class="skill-item text-gray-300" data-skill="Data Modeling">Data Modeling</li>
-                        <li class="skill-item text-gray-300" data-skill="Business Intelligence">Business Intelligence</li>
+                        <li class="skill-item text-gray-300" data-skill="Hadoop" data-level="75">Hadoop <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Apache Spark" data-level="80">Apache Spark <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Kafka" data-level="70">Kafka <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Data Modeling" data-level="85">Data Modeling <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Business Intelligence" data-level="90">Business Intelligence <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3 class="text-xl font-medium text-cyan-400 neon-text mb-3">Programming & Tools</h3>
                     <ul class="space-y-2">
-                        <li class="skill-item text-gray-300" data-skill="Python">Python</li>
-                        <li class="skill-item text-gray-300" data-skill="SQL">SQL</li>
-                        <li class="skill-item text-gray-300" data-skill="Docker">Docker</li>
-                        <li class="skill-item text-gray-300" data-skill="Git">Git</li>
-                        <li class="skill-item text-gray-300" data-skill="Power BI">Power BI</li>
+                        <li class="skill-item text-gray-300" data-skill="Python" data-level="95">Python <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="SQL" data-level="90">SQL <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Docker" data-level="70">Docker <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Git" data-level="85">Git <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
+                        <li class="skill-item text-gray-300" data-skill="Power BI" data-level="80">Power BI <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div></li>
                     </ul>
                 </div>
             </div>
@@ -558,6 +614,17 @@
             </form>
         </section>
     </main>
+
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <button id="backToTop" class="bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 opacity-0">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="floatingContact" class="bg-purple-500 hover:bg-purple-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110">
+            <i class="fas fa-envelope"></i>
+        </button>
+    </div>
+
     <footer class="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-4 mt-8 neon-glow">
         <div class="container mx-auto flex justify-center items-center">
             <div class="flex items-center space-x-4">

@@ -1,7 +1,7 @@
 // Fonction principale d'initialisation
 function initializeAll() {
     console.log('Initializing all functions');
-    
+
     setupSmoothScrolling();
     setupHeaderAnimation();
     setupContactForm();
@@ -15,6 +15,10 @@ function initializeAll() {
     animateOnScroll();
     animateLanguageBars();
     setupMoreButton();
+    setupParallax();
+    animateSkillBars();
+    setupFloatingButtons();
+    setupSectionHighlights();
 }
 
 // Gestion de l'affichage de la nouvelle section
@@ -230,9 +234,9 @@ function animateExperiences() {
 
 // Animation du texte de l'en-tête
 function animateHeaderText() {
-    typeWriter('name', 100);
-    setTimeout(() => typeWriter('title', 50), 2000);
-    setTimeout(() => typeWriter('quote', 75), 4000);
+    typeWriter('name', 80);
+    setTimeout(() => typeWriter('title', 40), 2000);
+    setTimeout(() => typeWriter('quote', 60), 4000);
 }
 
 // Fonction pour animer le texte lettre par lettre
@@ -242,11 +246,24 @@ function typeWriter(elementId, speed = 100) {
     element.innerHTML = '';
     let i = 0;
 
+    // Add cursor
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    cursor.textContent = '|';
+    element.appendChild(cursor);
+
     function type() {
         if (i < text.length) {
+            cursor.remove();
             element.innerHTML += text.charAt(i);
+            element.appendChild(cursor);
             i++;
             setTimeout(type, speed);
+        } else {
+            // Blink cursor after typing is done
+            setInterval(() => {
+                cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+            }, 500);
         }
     }
 
@@ -257,6 +274,88 @@ function typeWriter(elementId, speed = 100) {
 function setupParticles() {
     particlesJS.load('particles-js', 'particles.json', function() {
         console.log('particles.js loaded');
+    });
+}
+
+// Configuration du parallax
+function setupParallax() {
+    const parallaxImage = document.querySelector('.parallax-image');
+    if (parallaxImage) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            parallaxImage.style.transform = `translateY(${rate}px)`;
+        });
+    }
+}
+
+// Animation des barres de compétences
+function animateSkillBars() {
+    const skillItems = document.querySelectorAll('.skill-item');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const level = entry.target.getAttribute('data-level');
+                const fill = entry.target.querySelector('.skill-fill');
+                if (fill) {
+                    fill.style.width = level + '%';
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    skillItems.forEach(item => {
+        observer.observe(item);
+    });
+}
+
+// Configuration des boutons flottants
+function setupFloatingButtons() {
+    const backToTop = document.getElementById('backToTop');
+    const floatingContact = document.getElementById('floatingContact');
+
+    // Back to top
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTop.classList.remove('opacity-0');
+            backToTop.classList.add('opacity-100');
+        } else {
+            backToTop.classList.remove('opacity-100');
+            backToTop.classList.add('opacity-0');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Floating contact
+    floatingContact.addEventListener('click', () => {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
+// Mise en évidence des sections dans la navigation
+function setupSectionHighlights() {
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 60) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('text-cyan-400');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('text-cyan-400');
+            }
+        });
     });
 }
 
